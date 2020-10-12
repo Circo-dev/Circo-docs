@@ -1,2 +1,79 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Tutorial · Circo</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../"><img src="../assets/logo.png" alt="Circo logo"/></a><div class="docs-package-name"><span class="docs-autofit">Circo</span></div><form class="docs-search" action="../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../">Introducing Circo</a></li><li><a class="tocitem" href="../install/">Installation</a></li><li><a class="tocitem" href="../showcase/">Showcase</a></li><li class="is-active"><a class="tocitem" href>Tutorial</a></li><li><a class="tocitem" href="../infotons/">Infoton Optimization</a></li><li><a class="tocitem" href="../plugindev/">Plugin development</a></li><li><a class="tocitem" href="../reference/">Reference</a></li><li><a class="tocitem" href="../troubleshooting/">Troubleshooting</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Tutorial</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Tutorial</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/Circo-dev/Circo/blob/master/docs/src/tutorial.jl" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Tutorial"><a class="docs-heading-anchor" href="#Tutorial">Tutorial</a><a id="Tutorial-1"></a><a class="docs-heading-anchor-permalink" href="#Tutorial" title="Permalink"></a></h1><pre><code class="language-julia">struct X end</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../showcase/">« Showcase</a><a class="docs-footer-nextpage" href="../infotons/">Infoton Optimization »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Friday 9 October 2020 19:51">Friday 9 October 2020</span>. Using Julia version 1.5.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Tutorial · Circo</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../"><img src="../assets/logo.png" alt="Circo logo"/></a><div class="docs-package-name"><span class="docs-autofit">Circo</span></div><form class="docs-search" action="../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../">Introducing Circo</a></li><li><a class="tocitem" href="../install/">Installation</a></li><li><a class="tocitem" href="../showcase/">Showcase</a></li><li class="is-active"><a class="tocitem" href>Tutorial</a></li><li><a class="tocitem" href="../infotons/">Infoton Optimization</a></li><li><a class="tocitem" href="../plugindev/">Plugin development</a></li><li><a class="tocitem" href="../reference/">Reference</a></li><li><a class="tocitem" href="../troubleshooting/">Troubleshooting</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Tutorial</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Tutorial</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/Circo-dev/Circo/blob/master/docs/src/tutorial.jl" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Tutorial"><a class="docs-heading-anchor" href="#Tutorial">Tutorial</a><a id="Tutorial-1"></a><a class="docs-heading-anchor-permalink" href="#Tutorial" title="Permalink"></a></h1><p>We will create a distributed engine for Twitter clones. Don&#39;t worry, it is not complicated, at least not in this unfinished prototype form. But it works, and it scales to any size!</p><p>For simplicity, we store posts in simple structs (inside actors, but not actors themselves):</p><pre><code class="language-julia">using Circo
+
+struct Post
+    authorname::String
+    text::String
+end</code></pre><p>A <code>Feed</code>, our first actor contains a growing list of posts from different authors. Our simplistic approach is that when someone opens the twitter clone, a new <code>Feed</code> will be created for that session, populated with recent posts. While the feed is alive, it also receives pushed updates from its sources.</p><pre><code class="language-julia">mutable struct Feed &lt;: AbstractActor{Any}
+    posts::Vector{Post}
+    sources::Vector{Addr} # Post sources that this feed watches
+    core::Any # This small boilerplate is needed for every actor
+    Feed() = new([], [])
+    Feed(sources) = new(sources, [])
+end</code></pre><p>When the feed receives a <code>Post</code>, it just prints and stores it:</p><pre><code class="language-julia">function Circo.onmessage(me::Feed, post::Post, service)
+    println(&quot;Feed $(box(me)) received post: $post&quot;)
+    push!(me.posts, post)
+end</code></pre><p>Now we can try out what we have:</p><pre><code class="language-julia">feed = Feed()
+
+ctx = CircoContext() # This is our connection to the Circo system
+s = ActorScheduler(ctx, [feed])
+@async s() # Start the scheduler in the background
+
+send(s, feed, Post(&quot;Me&quot;, &quot;My first post&quot;)) # Send a post from the outside to the feed
+feed.posts</code></pre><pre class="documenter-example-output">1-element Array{Main.ex-tutorial.Post,1}:
+ Main.ex-tutorial.Post(&quot;Me&quot;, &quot;My first post&quot;)</pre><p>Great, the post arrived at the feed!</p><p>Now we will create a <code>Profile</code> actor which can create posts and follow other profiles.</p><pre><code class="language-julia">mutable struct Profile &lt;: AbstractActor{Any}
+    name::String
+    posts::Vector{Post}
+    following::Vector{Addr} # Adresses of the profiles we follow
+    watchers::Vector{Addr} # Feeds to notify about our new posts
+    core::Any
+    Profile(name) = new(name, [], [], [])
+end</code></pre><p>The <code>Profile</code> will start following another one if it receives the <code>Follow</code> message:</p><pre><code class="language-julia">struct Follow
+    whom::Addr
+end
+
+function Circo.onmessage(me::Profile, msg::Follow, service)
+    println(&quot;$(me.name) ($(box(me))): Starting to follow $(box(msg.whom))&quot;)
+    push!(me.following, msg.whom)
+end</code></pre><p>Now we can create a few profiles and connect them:</p><pre><code class="language-julia">alice = spawn(s, Profile(&quot;Alice&quot;))
+bela = spawn(s, Profile(&quot;Béla&quot;))
+cecile = spawn(s, Profile(&quot;Cécile&quot;))
+send(s, alice, Follow(bela))
+send(s, alice, Follow(cecile))
+send(s, bela, Follow(cecile))</code></pre><p>Profiles will create posts when they receive a <code>CreatePost</code> message:</p><pre><code class="language-julia">struct CreatePost
+    text::String
+end
+
+function Circo.onmessage(me::Profile, msg::CreatePost, service)
+    post = Post(me.name, msg.text)
+    println(&quot;Posting: $post&quot;)
+    push!(me.posts, post)
+    notify_watchers(me, post, service) # Send out the post to the feeds of our live followers (if any)
+end
+
+function notify_watchers(me::Profile, post, service)
+    for watcher in me.watchers
+        send(service, me, watcher, post)
+    end
+end</code></pre><pre class="documenter-example-output">notify_watchers (generic function with 1 method)</pre><p>Let our users create a few interesting posts:</p><pre><code class="language-julia">send(s, alice, CreatePost(&quot;Through the Looking-Glass&quot;))
+send(s, bela, CreatePost(&quot;I lost my handkerchief&quot;))
+send(s, cecile, CreatePost(&quot;My first post&quot;))
+send(s, cecile, CreatePost(&quot;At the zoo&quot;))</code></pre><p>As there are no feed watching any of the profiles at the time, no notifications were sent out.</p><p>Time to create a live feed! The <code>CreateFeed</code> message asks a profile to create a feed that is sourced from the profiles this one follows:</p><pre><code class="language-julia">struct CreateFeed end
+function Circo.onmessage(me::Profile, msg::CreateFeed, service)
+    feed = spawn(service, Feed(copy(me.following)))
+    println(&quot;Created Feed: $(feed)&quot;)
+end</code></pre><p>When the feed is spawned, it starts watching the profiles by sending them an <code>AddWatcher</code> message.</p><pre><code class="language-julia">struct AddWatcher
+    watcher::Addr
+end
+
+function Circo.onschedule(me::Feed, service)
+    for source in me.sources
+        send(service, me, source, AddWatcher(addr(me)))
+    end
+end</code></pre><p>The profile reacts with immediately sending back its last 3 posts, and starting to send notifications about future posts:</p><pre><code class="language-julia">function Circo.onmessage(me::Profile, msg::AddWatcher, service)
+    for post in me.posts[max(end - 2, 1):end]
+        send(service, me, msg.watcher, post)
+    end
+    push!(me.watchers, msg.watcher)
+end</code></pre><p>At the end we can simulate the event that <code>Alice</code> opens the app like this:</p><pre><code class="language-julia">send(s, alice, CreateFeed())</code></pre><p>When Béla creates a new post, it will arrive on the feed of Alice:</p><pre><code class="language-julia">sleep(2.0)
+send(s, bela, CreatePost(&quot;Have you ever seen a llama wearing pajamas?&quot;))</code></pre><p>X</p><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../showcase/">« Showcase</a><a class="docs-footer-nextpage" href="../infotons/">Infoton Optimization »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Monday 12 October 2020 07:38">Monday 12 October 2020</span>. Using Julia version 1.5.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
