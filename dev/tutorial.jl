@@ -86,20 +86,20 @@ end
 feed = Feed([])
 
 ctx = CircoContext()
-s = ActorScheduler(ctx, [feed])
+s = Scheduler(ctx, [feed])
 run!(s) # Start the scheduler in the background
 
 #
 # The `CircoContext` manages the configuration and helps building a tailored system:
-# it loads the plugins, generates types, etc. The `ActorScheduler` then executes
+# it loads the plugins, generates types, etc. The `Scheduler` then executes
 # our actors in that context.
 #
 # ---
 #
 # The feed is scheduled and waiting for posts. We can send one from the outside:
 
-sleep(5.0) # hide
 send(s, feed, Post("Me", "My first post"))
+sleep(1.0) # hide
 
 # !!! output "Output"
 #     ```
@@ -139,7 +139,7 @@ end
 # ---
 #
 # Now we can create a few profiles and connect them. But first the running scheduler has to
-# be paused and restarted for the new methods to take effect.
+# be paused and restarted for the new `onmessage` method to take effect.
 
 pause!(s); run!(s)
 alice = spawn(s, Profile("Alice"))
@@ -178,7 +178,6 @@ function notify_watchers(me::Profile, post, service)
         send(service, me, watcher, post)
     end
 end
-; # hide
 
 #
 # ---
@@ -251,7 +250,7 @@ end
 
 pause!(s); run!(s) # hide
 send(s, alice, CreateFeed())
-sleep(2.0) # hide
+sleep(1.0) # hide
 
 # !!! output "Output"
 #     ```
